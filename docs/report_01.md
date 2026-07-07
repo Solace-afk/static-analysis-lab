@@ -9,7 +9,7 @@ Langkah pertama dalam analisis statis adalah mengidentifikasi sifat dasar dari f
 ### Informasi File Utama
 Berdasarkan analisis menggunakan Detect It Easy (DIE):
 
-![File Info](screenshot/pcbenchmark/file info.png)
+![File Info](../screenshot/pcbenchmark/file_info.png)
 
 - **Nama File Asli:** `PCGameBenchmark_Detector.exe`
 - **Ukuran File:** `106496 bytes (104.00 KiB)`
