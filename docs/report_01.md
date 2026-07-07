@@ -21,7 +21,7 @@ Berdasarkan analisis menggunakan Detect It Easy (DIE):
 ### Ekstraksi Hash
 Untuk memastikan integritas file dan memberikan identifikasi unik (IOC), saya mengekstrak nilai *hash* menggunakan fitur bawaan DIE:
 
-![Hash Info](screenshot/pcbenchmark/hash.png)
+![Hash Info](../screenshot/pcbenchmark/hash.png)
 
 - **MD5 Hash:** `04873a11bdd1fcfb24367527a65400d6`
 
@@ -33,7 +33,7 @@ Untuk memastikan integritas file dan memberikan identifikasi unik (IOC), saya me
 
 Langkah selanjutnya adalah memeriksa *strings* atau teks yang dapat dibaca manusia di dalam *binary*. Hal ini sering kali membocorkan informasi mengenai *library* yang digunakan, pesan *error*, atau bahkan *URL/IP Address* yang mungkin dihubungi program.
 
-![Strings Analysis](screenshot/pcbenchmark/string.png)
+![Strings Analysis](../screenshot/pcbenchmark/string.png)
 
 Berdasarkan ekstraksi awal pada bagian `.text` (bagian utama eksekusi instruksi), terlihat beberapa temuan:
 - Ditemukan string standar DOS *stub*: `!This program cannot be run in DOS mode.`
@@ -45,7 +45,7 @@ Berdasarkan ekstraksi awal pada bagian `.text` (bagian utama eksekusi instruksi)
 
 *Import Table* adalah daftar fungsi dari pustaka luar (*Dynamic Link Libraries* / DLL) yang dipinjam oleh program ini untuk bisa berjalan. Menganalisis ini sangat krusial untuk menebak apa saja "kemampuan" dari program tersebut.
 
-![Import Table Analysis](screenshot/pcbenchmark/import.png)
+![Import Table Analysis](../screenshot/pcbenchmark/import.png)
 
 Temuan dari *Import Directory*:
 - **DLL yang Diimpor:** `mscoree.dll`
