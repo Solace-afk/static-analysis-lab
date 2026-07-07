@@ -22,7 +22,7 @@ Berikut adalah daftar laporan yang tersedia:
 
 | No | Nama Target | MD5 Hash | Tipe File | Laporan | Status |
 |:---|:---|:---|:---|:---|:---|
-| 1  | `PCGameBenchmark_Detector.exe` | TBD | PE32 | [Laporan 01](./docs/report_01.md) | 🚧 WIP |
+| 1  | `PCGameBenchmark_Detector.exe` | 04873a11bdd1fcfb24367527a65400d6 | PE32 | [Laporan 01](./docs/report_01.md) | Selesai |
 | 2  | `SpotifySetup.exe` | TBD | PE64 | [Laporan 02](./docs/report_02.md) | 🚧 WIP |
 
 ---
