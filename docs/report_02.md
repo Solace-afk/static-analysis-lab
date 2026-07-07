@@ -9,7 +9,7 @@ Analisis dimulai dengan memeriksa metadata dan struktur dasar *binary* menggunak
 ### Informasi File Utama
 Berdasarkan hasil pemindaian informasi file:
 
-![File Info](screenshot/spotify/file_info.png)
+![File Info](../screenshot/spotify/file_info.png)
 - **Nama File Asli:** `SpotifySetup.exe`
 - **Ukuran File:** `1453488 bytes (1.39 MiB)`
 - **Tipe File:** `PE64` (Portable Executable untuk sistem operasi Windows)
@@ -20,7 +20,7 @@ Berdasarkan hasil pemindaian informasi file:
 ### Ekstraksi Hash & Sections
 Pemindaian pada struktur *hash* dan *sections* memberikan gambaran tentang komponen penyusun file ini:
 
-![Hash Info](screenshot/spotify//hash.png)
+![Hash Info](../screenshot/spotify//hash.png)
 
 - **MD5 Hash:** `6a4e6917dbf1675290344526936494f0`
 - **Sections:** Terdapat bagian-bagian standar seperti `.text` (kode program), `.rdata` (data konstan), `.data`, dan `.rsrc` (resources).
@@ -35,7 +35,7 @@ Pemeriksaan *strings* dilakukan untuk mencari indikator kompromi (IOC) atau petu
 ### Indikator Jaringan (HTTP/URL)
 Pemfilteran *strings* dengan kata kunci `http` mengungkap banyak informasi berharga:
 
-![Strings HTTP](screenshot/spotify/string_2.png)
+![Strings HTTP](../screenshot/spotify/string_2.png)
 
 - **URL Unduhan:** Ditemukan *link* spesifik seperti `https://www.spotify.com/download` dan `https://download.scdn.co/SpotifyFullSetup.exe`.
 - **Fungsi Jaringan:** Kehadiran teks `SpotifyHttpsListener` dan nama API `HttpQueryInfoW` menunjukkan kemampuan program untuk melakukan koneksi HTTP/HTTPS keluar secara mandiri.
@@ -44,7 +44,7 @@ Pemfilteran *strings* dengan kata kunci `http` mengungkap banyak informasi berha
 ### Referensi Pustaka Tambahan (DLL)
 Pemfilteran *strings* dengan kata kunci `dll` melengkapi informasi tabel impor:
 
-![Strings DLL](screenshot/spotify/string_1.png)
+![Strings DLL](../screenshot/spotify/string_1.png)
 
 - Terlihat referensi ke `WININET.dll`, yaitu modul utama Windows untuk fungsionalitas internet (seperti mengunduh file via HTTP/FTP).
 - Ditemukan juga `VERSION.dll` untuk mengekstrak informasi versi file, dan berbagai DLL sistem lainnya.
@@ -55,7 +55,7 @@ Pemfilteran *strings* dengan kata kunci `dll` melengkapi informasi tabel impor:
 
 Menganalisis *Import Table* membantu memastikan fungsi apa saja yang secara eksplisit dipanggil oleh program dari sistem operasi Windows.
 
-![Import Table Analysis](screenshot/spotify/import.png)
+![Import Table Analysis](../screenshot/spotify/import.png)
 
 Temuan dari daftar impor:
 - **GUI & Fungsionalitas Dasar:** Program mengimpor pustaka standar seperti `USER32.dll` (untuk membuat jendela/tombol), `GDI32.dll` (untuk grafis), dan `COMCTL32.dll` (dengan fungsi yang terlihat `InitCommonControlsEx` untuk elemen antarmuka pengguna modern).
